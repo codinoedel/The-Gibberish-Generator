@@ -5,21 +5,19 @@ class DBConn:
 	c = conn.cursor()
 
 	def containsSubstring(self, s):
-		s = '%' + s + '%'
-		substring = (s,)
+		substring = ('%'+s+'%',)
 		self.c.execute("SELECT * FROM words WHERE word LIKE ?", substring)
 		words = self.c.fetchall()
 		wordcount = len(words)
 		if wordcount > 0:
-			self.insertMatch(substring, int(wordcount))
+			self.insertMatch(s, int(wordcount))
 			return True
 		else:
 			self.insertNonMatch(substring)
 			return False
 
 	def insertMatch(self, s, numMatches):
-		s = s[0].replace('%', '')
-
+		s = (s,)
 		try:
 			self.c.execute("INSERT INTO consonant_substrings_in_english (substr, occurences) VALUES (?, ?)", (s, numMatches))
 			self.conn.commit()
@@ -27,10 +25,10 @@ class DBConn:
 			pass
 
 	def insertNonMatch(self, s):
-		s = s[0].replace('%', '')
-		substring = (s,)
+		s = (s,)
+
 		try:
-			self.c.execute("INSERT INTO consonant_substrings_not_in_english (substr) VALUES (?)", substring)
+			self.c.execute("INSERT INTO consonant_substrings_not_in_english (substr) VALUES (?)", s)
 			self.conn.commit()
 		except sqlite3.IntegrityError:
 			pass
@@ -49,6 +47,7 @@ class GenerateSubstring:
 
 		for consonant1 in self.consonants:
 			for consonant2 in self.consonants:
+				if ()
 				substringlist.append(consonant1 + consonant2)
 		return substringlist
 
@@ -74,7 +73,7 @@ class GenerateSubstring:
 def deleteDuplicates(comp, nomatches):
 	print comp
 	print nomatches
-	
+
 	for word in nomatches: # iterates over all the non-matches
 		for plet in comp: # iterates over all the comparators to find comparators whose substring is in the non-matches list
 			if word in plet:
