@@ -1,0 +1,6 @@
+C:\Users\Kit\Code Projects\The Gibberish Generator\The-Gibberish-Generator\Gibberish-Generator\Gibberish-Generator\bin\Debug\Gibberish-Generator.exe.config
+C:\Users\Kit\Code Projects\The Gibberish Generator\The-Gibberish-Generator\Gibberish-Generator\Gibberish-Generator\bin\Debug\Gibberish-Generator.exe
+C:\Users\Kit\Code Projects\The Gibberish Generator\The-Gibberish-Generator\Gibberish-Generator\Gibberish-Generator\bin\Debug\Gibberish-Generator.pdb
+C:\Users\Kit\Code Projects\The Gibberish Generator\The-Gibberish-Generator\Gibberish-Generator\Gibberish-Generator\obj\Debug\Gibberish-Generator.csprojResolveAssemblyReference.cache
+C:\Users\Kit\Code Projects\The Gibberish Generator\The-Gibberish-Generator\Gibberish-Generator\Gibberish-Generator\obj\Debug\Gibberish-Generator.exe
+C:\Users\Kit\Code Projects\The Gibberish Generator\The-Gibberish-Generator\Gibberish-Generator\Gibberish-Generator\obj\Debug\Gibberish-Generator.pdb
